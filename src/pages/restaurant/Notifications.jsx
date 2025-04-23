@@ -13,7 +13,7 @@ const Notifications = () => {
   useEffect(() => {
     const fetchNotifications = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/notifications/Restaurant/${hotel._id}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/notifications/Restaurant/${hotel._id}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || 'Failed to fetch notifications');
         setNotifications(data);
@@ -32,7 +32,7 @@ const Notifications = () => {
     if (!confirm) return;
 
     try {
-      const res = await fetch(`https://ofd-backend.onrender.comapi/notifications/${id}`, {
+      const res = await fetch(`https://ofd-backend.onrender.com/api/notifications/${id}`, {
         method: 'DELETE',
       });
       const data = await res.json();

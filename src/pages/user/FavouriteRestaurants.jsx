@@ -14,7 +14,7 @@ const FavouriteRestaurants = () => {
     // Fetch favorite restaurants based on user's favHotels
     const fetchFavouriteRestaurants = async () => {
       try {
-        const response = await fetch('https://ofd-backend.onrender.comapi/restaurants/favorites', {
+        const response = await fetch('https://ofd-backend.onrender.com/api/restaurants/favorites', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -26,7 +26,7 @@ const Cart = () => {
         }
 
         try {
-            const response = await fetch(`https://ofd-backend.onrender.comapi/cart/${user._id}`);
+            const response = await fetch(`https://ofd-backend.onrender.com/api/cart/${user._id}`);
             if (!response.ok) throw new Error("Failed to fetch cart items");
             const data = await response.json();
             setCartItems(data);
@@ -52,7 +52,7 @@ const Cart = () => {
         if (newQuantity < 1) return;
 
         try {
-            const response = await fetch("https://ofd-backend.onrender.comapi/cart/update/", {
+            const response = await fetch("https://ofd-backend.onrender.com/api/cart/update/", {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ userId: user._id, menuId, quantity: newQuantity }),
@@ -71,7 +71,7 @@ const Cart = () => {
 
     const deleteItem = async (menuId) => {
         try {
-            const response = await fetch(`https://ofd-backend.onrender.comapi/cart/${user._id}/${menuId}`, {
+            const response = await fetch(`https://ofd-backend.onrender.com/api/cart/${user._id}/${menuId}`, {
                 method: "DELETE",
             });
 
@@ -122,7 +122,7 @@ const Cart = () => {
         if (paymentMethod === "payOnDelivery") {
             for (const restaurantId in groupedItems) {
                 try {
-                    const res = await fetch("https://ofd-backend.onrender.comapi/orders", {
+                    const res = await fetch("https://ofd-backend.onrender.com/api/orders", {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
@@ -161,7 +161,7 @@ const Cart = () => {
                 handler: async function (response) {
                     for (const restaurantId in groupedItems) {
                         try {
-                            const res = await fetch("https://ofd-backend.onrender.comapi/orders", {
+                            const res = await fetch("https://ofd-backend.onrender.com/api/orders", {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify({

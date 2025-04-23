@@ -15,7 +15,7 @@ export default function UserLogin() {
     setError("");
 
     try {
-      const response = await fetch("https://ofd-backend.onrender.comapi/users/login", {
+      const response = await fetch("https://ofd-backend.onrender.com/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

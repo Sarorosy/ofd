@@ -32,7 +32,7 @@ export default function RestaurantRegister() {
     }
   
     try {
-      const res = await fetch("https://ofd-backend.onrender.comapi/restaurants/register", {
+      const res = await fetch("https://ofd-backend.onrender.com/api/restaurants/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -15,7 +15,7 @@ const FavouriteMenus = () => {
     const fetchFavouriteMenus = async () => {
       try {
         const response = await fetch(
-          "https://ofd-backend.onrender.comapi/menus/favorites",
+          "https://ofd-backend.onrender.com/api/menus/favorites",
           {
             method: "POST",
             headers: {

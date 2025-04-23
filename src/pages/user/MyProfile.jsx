@@ -30,7 +30,7 @@ const MyProfile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const res = await fetch(`https://ofd-backend.onrender.comapi/users/profile/${userId}`);
+                const res = await fetch(`https://ofd-backend.onrender.com/api/users/profile/${userId}`);
                 if (!res.ok) {
                     throw new Error('Failed to fetch profile');
                 }
@@ -56,7 +56,7 @@ const MyProfile = () => {
         setLoading(true);
         setMessage('');
         try {
-            const res = await fetch(`https://ofd-backend.onrender.comapi/users/profile/${userId}`,
+            const res = await fetch(`https://ofd-backend.onrender.com/api/users/profile/${userId}`,
                 {
                     method: 'PUT',
                     headers: {

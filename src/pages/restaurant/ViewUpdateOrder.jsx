@@ -15,7 +15,7 @@ const ViewUpdateOrder = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/orders/${id}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/orders/${id}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || 'Failed to fetch order');
         setOrder(data);
@@ -35,7 +35,7 @@ const ViewUpdateOrder = () => {
 
     try {
       setUpdating(true);
-      const res = await fetch(`https://ofd-backend.onrender.comapi/orders/${id}`, {
+      const res = await fetch(`https://ofd-backend.onrender.com/api/orders/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

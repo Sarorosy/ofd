@@ -17,7 +17,7 @@ export default function Menu() {
     const fetchMenus = async () => {
         setLoading(true);
         try {
-            const response = await fetch(`https://ofd-backend.onrender.comapi/menus/${hotel._id}`);
+            const response = await fetch(`https://ofd-backend.onrender.com/api/menus/${hotel._id}`);
             const data = await response.json();
             setMenus(data);
         } catch (error) {
@@ -43,7 +43,7 @@ export default function Menu() {
         if (!confirmDelete) return;
       
         try {
-          const res = await fetch(`https://ofd-backend.onrender.comapi/menus/${id}`, {
+          const res = await fetch(`https://ofd-backend.onrender.com/api/menus/${id}`, {
             method: "DELETE",
           });
       

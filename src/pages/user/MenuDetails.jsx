@@ -18,7 +18,7 @@ const MenuDetails = () => {
     const fetchMenuDetails = async () => {
       try {
         const res = await fetch(
-          `https://ofd-backend.onrender.comapi/menus/single/${menuId}`
+          `https://ofd-backend.onrender.com/api/menus/single/${menuId}`
         );
         if (!res.ok) throw new Error("Failed to fetch menu details");
 
@@ -42,7 +42,7 @@ const MenuDetails = () => {
       return;
     }
     try {
-      const response = await fetch(`https://ofd-backend.onrender.comapi/cart/add`, {
+      const response = await fetch(`https://ofd-backend.onrender.com/api/cart/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const MenuDetails = () => {
         return;
     }
     try {
-        const response = await fetch("https://ofd-backend.onrender.comapi/users/fav-menu", {
+        const response = await fetch("https://ofd-backend.onrender.com/api/users/fav-menu", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

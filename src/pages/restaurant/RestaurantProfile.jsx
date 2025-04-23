@@ -30,7 +30,7 @@ const RestaurantProfile = () => {
 
         const fetchProfile = async () => {
             try {
-                const res = await fetch(`https://ofd-backend.onrender.comapi/restaurants/profile/${hotel._id}`);
+                const res = await fetch(`https://ofd-backend.onrender.com/api/restaurants/profile/${hotel._id}`);
                 const data = await res.json();
                 setProfile(data);
                 setFormData({
@@ -84,7 +84,7 @@ const RestaurantProfile = () => {
         }
 
         try {
-            const res = await fetch(`https://ofd-backend.onrender.comapi/restaurants/profile/${hotel._id}`, {
+            const res = await fetch(`https://ofd-backend.onrender.com/api/restaurants/profile/${hotel._id}`, {
                 method: "PUT",
                 body: data
             });

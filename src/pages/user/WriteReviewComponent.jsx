@@ -21,7 +21,7 @@ const WriteReviewComponent = ({ userId, restaurantId }) => {
 
     setLoading(true);
     try {
-      const res = await fetch('https://ofd-backend.onrender.comapi/reviews', {
+      const res = await fetch('https://ofd-backend.onrender.com/api/reviews', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userId, restaurantId, stars, comment }),

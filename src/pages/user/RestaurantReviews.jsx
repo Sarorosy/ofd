@@ -8,7 +8,7 @@ const RestaurantReviews = ({ restaurantId }) => {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/reviews/restaurant/${restaurantId}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/reviews/restaurant/${restaurantId}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || "Failed to fetch reviews");
         setReviews(data);

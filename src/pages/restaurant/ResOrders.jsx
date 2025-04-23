@@ -12,7 +12,7 @@ const ResOrders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/orders/hotel/${hotel._id}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/orders/hotel/${hotel._id}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || 'Failed to fetch orders');
         setOrders(data);

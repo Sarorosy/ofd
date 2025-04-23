@@ -33,7 +33,7 @@ export default function AddMenu({ closeModal, after }) {
     if (image) data.append("image", image);
 
     try {
-      const response = await fetch("https://ofd-backend.onrender.comapi/menus/",{
+      const response = await fetch("https://ofd-backend.onrender.com/api/menus/",{
         method: "POST",
         body: data,
       })

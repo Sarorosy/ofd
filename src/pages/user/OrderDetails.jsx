@@ -16,7 +16,7 @@ const OrderDetails = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/orders/${id}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/orders/${id}`);
         const data = await res.json();
         if (!res.ok) throw new Error(data.message || "Failed to fetch order");
         setOrder(data);
@@ -70,7 +70,7 @@ const OrderDetails = () => {
       description: `Payment for Order #${order._id.slice(-6)}`,
       handler: async function (response) {
         try {
-          const res = await fetch(`https://ofd-backend.onrender.comapi/orders/${order._id}`, {
+          const res = await fetch(`https://ofd-backend.onrender.com/api/orders/${order._id}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',

@@ -17,7 +17,7 @@ export default function EditMenu({ closeModal, menuId, after }) {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        const res = await fetch(`https://ofd-backend.onrender.comapi/menus/single/${menuId}`);
+        const res = await fetch(`https://ofd-backend.onrender.com/api/menus/single/${menuId}`);
         const data = await res.json();
         setFormData({
           title: data.title,
@@ -53,7 +53,7 @@ export default function EditMenu({ closeModal, menuId, after }) {
     if (image) data.append("image", image);
 
     try {
-      const response = await fetch(`https://ofd-backend.onrender.comapi/menus/${menuId}`, {
+      const response = await fetch(`https://ofd-backend.onrender.com/api/menus/${menuId}`, {
         method: "PUT",
         body: data,
       });

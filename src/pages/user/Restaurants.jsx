@@ -13,7 +13,7 @@ export default function Restaurants() {
   const fetchRestaurants = async () => {
     try {
       setLoading(true);
-      const response = await fetch("https://ofd-backend.onrender.comapi/restaurants/"); // Replace with your API endpoint
+      const response = await fetch("https://ofd-backend.onrender.com/api/restaurants/"); // Replace with your API endpoint
       const data = await response.json();
       setRestaurants(data);
     } catch (error) {
@@ -33,7 +33,7 @@ export default function Restaurants() {
       return;
     }
     try {
-      const response = await fetch("https://ofd-backend.onrender.comapi/users/fav-hotel", {
+      const response = await fetch("https://ofd-backend.onrender.com/api/users/fav-hotel", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

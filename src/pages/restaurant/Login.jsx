@@ -23,7 +23,7 @@ export default function RestaurantLogin() {
     }
 
     try {
-      const res = await fetch("https://ofd-backend.onrender.comapi/restaurants/login", {
+      const res = await fetch("https://ofd-backend.onrender.com/api/restaurants/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +49,7 @@ export default function RestaurantLogin() {
       toast.error("Something went wrong. Please try again.");
     }
   };
-  //https://ofd-backend.onrender.com
+  //https://ofd-backend.onrender.com/
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-teal-100 to-blue-100 px-4">
